@@ -61,7 +61,7 @@ def ema(isler, ses):
 
 
 def chatterbox(isler, ses):
-    import torchaudio
+    import soundfile as sf
     from huggingface_hub import hf_hub_download
     from chatterbox.mtl_tts import ChatterboxMultilingualTTS
     ref = hf_hub_download('wite-tech/pocket-tts-turkish', f'voices/{ses}.wav')
@@ -71,7 +71,8 @@ def chatterbox(isler, ses):
         m = ChatterboxMultilingualTTS.from_pretrained(device='cpu')
     for j in isler:
         wav = m.generate(sayilar_yaziyla(j['metin']), language_id='tr', audio_prompt_path=ref, exaggeration=0.5, cfg_weight=0.4)
-        torchaudio.save(j['wav'], wav, m.sr)
+        # torchaudio.save yeni sürümde torchcodec istiyor; soundfile ile yazılır
+        sf.write(j['wav'], wav.squeeze().cpu().numpy(), m.sr, subtype='PCM_16')
 
 
 def main(is_dosyasi):

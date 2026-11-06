@@ -55,8 +55,7 @@ jobs:
                         "$P" install pocket-tts-turkish soundfile ;;
             ema)        "$P" install torch torchaudio --index-url https://download.pytorch.org/whl/cpu
                         "$P" install ema-lightning soundfile ;;
-            chatterbox) "$P" install chatterbox-tts num2words huggingface_hub
-                        "$P" install torch torchaudio --index-url https://download.pytorch.org/whl/cpu --force-reinstall --no-deps || true ;;
+            chatterbox) "$P" install chatterbox-tts num2words huggingface_hub soundfile ;;
           esac
           "$P" freeze > "$RUNNER_TEMP/paketler.txt"
       - name: Tarayici
@@ -68,11 +67,12 @@ jobs:
           AKADEMI_SES_AYAR_TR: ${{ matrix.aday.ayar }}
           AD: ${{ matrix.aday.ad }}
         run: |
+          set -o pipefail
           export AKADEMI_TTS_PYTHON="$HOME/tenv/bin/python"
           k=$(ls -d Videolar/TR/D001_*)
           c="cikti/$AD"; mkdir -p "$c"
           bas=$(date +%s)
-          python -X utf8 _Kaynak/motor/ses.py "$k" 2>&1 | tee "$c/_ses_log.txt"
+          python -X utf8 _Kaynak/motor/ses.py "$k" 2>&1 | tee "$c/_ses_log.txt" || { echo "SES HATASI"; exit 1; }
           echo "$(( $(date +%s) - bas ))" > "$c/_ses_sure_sn.txt"
           python -X utf8 _Kaynak/ses_deneme_tr/olcum.py "$k" "$c/olcum.json" 2>&1 | tail -3
           python -X utf8 _Kaynak/motor/uret.py "$k" > "$c/_uret_log.txt" 2>&1 || echo "URETIM HATASI" >> "$c/_uret_log.txt"
