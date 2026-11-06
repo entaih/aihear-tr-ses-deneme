@@ -1,0 +1,90 @@
+# AIHEAR Akademi: Türkçe ses denemesi. Aynı ders (D001) her adayla seslendirilir, ölçülür ve videosu üretilir.
+# Çalıştırma: gh workflow run ses_deneme.yml   (sonuçlar: her ses bir iş çıktısı; yerelde _Kaynak/ses_deneme_tr/indir.py)
+name: TR ses denemesi
+on:
+  workflow_dispatch:
+    inputs:
+      sesler:
+        description: 'Yalnız bu sesler (virgülle, boş = hepsi)'
+        default: ''
+permissions:
+  contents: read
+jobs:
+  ses:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    strategy:
+      fail-fast: false
+      matrix:
+        aday:
+          - { ad: edge_ahmet,     ayar: '{"motor": "edge", "ses": "tr-TR-AhmetNeural", "hiz": "+0%"}', paket: '' }
+          - { ad: edge_emel,      ayar: '{"motor": "edge", "ses": "tr-TR-EmelNeural", "hiz": "+0%"}',  paket: '' }
+          - { ad: pocket_erkek,   ayar: '{"motor": "genel", "ses": "pocket:male_1"}',      paket: 'pocket' }
+          - { ad: pocket_kadin,   ayar: '{"motor": "genel", "ses": "pocket:female_2"}',    paket: 'pocket' }
+          - { ad: ema,            ayar: '{"motor": "genel", "ses": "ema:varsayilan"}',     paket: 'ema' }
+          - { ad: chatterbox_erkek, ayar: '{"motor": "genel", "ses": "chatterbox:male_1"}',   paket: 'chatterbox' }
+          - { ad: chatterbox_kadin, ayar: '{"motor": "genel", "ses": "chatterbox:female_2"}', paket: 'chatterbox' }
+    steps:
+      - name: Secim
+        id: sec
+        env:
+          SESLER: ${{ inputs.sesler }}
+          AD: ${{ matrix.aday.ad }}
+        run: |
+          if [ -z "$SESLER" ] || echo ",$SESLER," | grep -q ",$AD,"; then echo "calis=1" >> "$GITHUB_OUTPUT"; fi
+      - if: steps.sec.outputs.calis
+        uses: actions/checkout@v4
+      - if: steps.sec.outputs.calis
+        uses: actions/setup-python@v5
+        with:
+          python-version: |
+            3.11
+            3.12
+      - if: steps.sec.outputs.calis
+        run: pip install -r requirements.txt num2words==0.5.14
+      - name: Model ortami
+        if: steps.sec.outputs.calis && matrix.aday.paket != ''
+        env:
+          PAKET: ${{ matrix.aday.paket }}
+        run: |
+          python3.11 -m venv "$HOME/tenv"
+          P="$HOME/tenv/bin/pip"
+          "$P" install --upgrade pip
+          case "$PAKET" in
+            pocket)     "$P" install torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+                        "$P" install pocket-tts-turkish soundfile ;;
+            ema)        "$P" install torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+                        "$P" install ema-lightning soundfile ;;
+            chatterbox) "$P" install chatterbox-tts num2words huggingface_hub
+                        "$P" install torch torchaudio --index-url https://download.pytorch.org/whl/cpu --force-reinstall --no-deps || true ;;
+          esac
+          "$P" freeze > "$RUNNER_TEMP/paketler.txt"
+      - name: Tarayici
+        if: steps.sec.outputs.calis
+        run: test -x /opt/microsoft/msedge/msedge || python -m playwright install --with-deps msedge
+      - name: Seslendir, olc, uret
+        if: steps.sec.outputs.calis
+        env:
+          AKADEMI_SES_AYAR_TR: ${{ matrix.aday.ayar }}
+          AD: ${{ matrix.aday.ad }}
+        run: |
+          export AKADEMI_TTS_PYTHON="$HOME/tenv/bin/python"
+          k=$(ls -d Videolar/TR/D001_*)
+          c="cikti/$AD"; mkdir -p "$c"
+          bas=$(date +%s)
+          python -X utf8 _Kaynak/motor/ses.py "$k" 2>&1 | tee "$c/_ses_log.txt"
+          echo "$(( $(date +%s) - bas ))" > "$c/_ses_sure_sn.txt"
+          python -X utf8 _Kaynak/ses_deneme_tr/olcum.py "$k" "$c/olcum.json" 2>&1 | tail -3
+          python -X utf8 _Kaynak/motor/uret.py "$k" > "$c/_uret_log.txt" 2>&1 || echo "URETIM HATASI" >> "$c/_uret_log.txt"
+          cp "$k"/*.mp4 "$c/$AD.mp4" 2>/dev/null || true
+          cp "$k/_ses.wav" "$c/$AD.wav" 2>/dev/null || true
+          cp "$k/zamanlama.json" "$c/" 2>/dev/null || true
+          cp "$k/_tts/_tts_sure.json" "$c/" 2>/dev/null || true
+          cp "$RUNNER_TEMP/paketler.txt" "$c/" 2>/dev/null || true
+      - if: always() && steps.sec.outputs.calis
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.aday.ad }}
+          path: cikti/
+          compression-level: 0
+          retention-days: 14

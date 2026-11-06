@@ -1,0 +1,275 @@
+{
+  "dil": "tr",
+  "bicim": "ders",
+  "dosya": "D001_Odyogram_Nedir_TR",
+  "kapak": {
+    "ust": "DERS 1",
+    "baslik": "*Odyogram*<br>nasıl okunur?",
+    "alt": "Eksenler, işaretler, derece ve tip",
+    "grafik": {"bolge": {"ust": -10, "alt": 25}, "seriler": [
+      {"kulak": "sag", "tip": "hava", "degerler": [10, 10, 15, 15, 20, 25]},
+      {"kulak": "sol", "tip": "hava", "degerler": [15, 15, 20, 35, 50, 55]}]}
+  },
+  "youtube": {
+    "baslik": "Odyogram Nedir, Nasıl Okunur? | Ders 01 | AIHEAR Odyoloji Akademisi",
+    "aciklama": "Odyogramın frekans ve dB HL eksenlerini, sağ ve sol kulak ile hava ve kemik yolu işaretlerini öğreniyoruz. Ardından örnek odyogramlarla kaybın derecesini, tipini ve konfigürasyonunu adım adım okuyoruz.\n\nAIHEAR Odyoloji Akademisi; odyoloji öğrencileri, odyometristler ve işitme alanında çalışan herkes için kısa ve net dersler hazırlar.\n\nKaynaklar: Katz, Handbook of Clinical Audiology; Gelfand, Essentials of Audiology; ASHA, Guidelines for Audiometric Symbols (1990); ASHA, Guidelines for Manual Pure-Tone Threshold Audiometry (2005).\n\nBu video eğitim amaçlıdır, tanı ve tedavi yerine geçmez.",
+    "kapanis_metni": "Yeni dersleri kaçırmamak için abone olun.",
+    "hashtag": ["odyoloji", "odyogram", "işitme"],
+    "etiketler": ["odyogram", "odyogram nasıl okunur", "audiogram", "hava yolu", "kemik yolu", "dB HL", "saf ses odyometrisi", "işitme kaybı", "odyoloji dersleri", "AIHEAR"]
+  },
+  "sahneler": [
+    {"id": "acilis", "tur": "acilis", "ust": "DERS 1", "baslik": "Odyogram nedir, *nasıl okunur?*",
+     "alt": "Eksenler, işaretler, derece, tip ve konfigürasyon",
+     "cumleler": [
+       "Merhaba, AIHEAR Odyoloji Akademisine hoş geldiniz.",
+       "Bu ilk derste odyoloji kliniğinin en temel belgesi olan odyogramı tanıyacağız.",
+       "Eksenleri, işaretleri ve bir odyogramdan kaybın derecesini, tipini ve biçimini nasıl okuyacağımızı adım adım göreceğiz."]},
+
+    {"id": "tanim", "tur": "maddeler", "bolum_no": "BÖLÜM 1", "bolum": "Odyogram nedir?", "baslik": "*Odyogram* nedir?",
+     "maddeler": [
+       {"metin": "İşitme eşiklerinin _grafiği_", "cumle": 0, "ikon": "odyogram"},
+       {"metin": "_Saf ses odyometrisi_ ile elde edilir", "cumle": 1, "ikon": "odyometre"},
+       {"metin": "Her kulak _ayrı ayrı_ test edilir", "cumle": 3, "ikon": "kulak"},
+       {"metin": "Hava yolu ve _kemik yolu_ ölçülür", "cumle": 4, "ikon": "kemik_vibratoru"}],
+     "yan": {"tur": "kart", "ust": "EŞİK", "metin": "Sesin denemelerin yaklaşık yarısında duyulduğu *en düşük* düzey", "cumle": 2},
+     "cumleler": [
+       "Odyogram (audiogram), bir kişinin farklı frekanslardaki işitme eşiklerini gösteren grafiktir.",
+       "Bu eşikler saf ses odyometrisi ile, yani tek frekanslı saf tonlar dinletilerek ölçülür.",
+       "Eşik, kişinin sesi denemelerin yaklaşık yarısında duyabildiği en düşük şiddettir.",
+       "Test her kulak için ayrı yapılır ve sonuçlar aynı grafikte ya da iki ayrı grafikte gösterilir.",
+       "Ölçüm iki yoldan yapılır: hava yolu (air conduction) ve kemik yolu (bone conduction).",
+       "Bu iki yolun karşılaştırılması, kaybın kulağın hangi bölümünden kaynaklandığını anlamamızı sağlar."]},
+
+    {"id": "olcum", "tur": "gorsel", "bolum_no": "BÖLÜM 1", "bolum": "Odyogram nedir?", "baslik": "Eşikler *nasıl* ölçülür?",
+     "cizim": "odyometre",
+     "etiketler": [
+       {"parca": "cihaz", "metin": "Odyometre", "cumle": 0},
+       {"parca": "kulaklik", "metin": "Kulaklık: hava yolu", "cumle": 1},
+       {"parca": "kemik_vibratoru", "metin": "Kemik vibratörü", "cumle": 3},
+       {"parca": "hasta_butonu", "metin": "Hasta butonu", "cumle": 5}],
+     "notlar": [
+       {"metin": "Hava yolu: dış, orta ve iç kulak", "cumle": 2, "ikon": "kulaklik"},
+       {"metin": "Kemik yolu: doğrudan iç kulak", "cumle": 4, "ikon": "kemik_vibratoru"},
+       {"metin": "10 dB azalt, 5 dB artır", "cumle": 6, "ikon": "grafik"}],
+     "cumleler": [
+       "Eşikler, odyometre adı verilen ve saf ses üreten bir cihazla ölçülür.",
+       "Hava yolu testinde ses, kulak üstü ya da kulak içi kulaklıklarla verilir.",
+       "Bu ses dış kulak, orta kulak ve iç kulaktan geçerek işitme yolunun tamamını sınar.",
+       "Kemik yolu testinde ise kulak arkasındaki mastoid kemiğe bir kemik vibratörü yerleştirilir.",
+       "Vibratör kafatasını titreştirir ve sesi büyük ölçüde dış ve orta kulağı atlayarak iç kulağa ulaştırır.",
+       "Hasta sesi her duyduğunda butona basar ya da elini kaldırır.",
+       "Eşik genellikle ses duyulunca on desibel azaltma, duyulmayınca beş desibel artırma kuralıyla bulunur."]},
+
+    {"id": "yatay", "tur": "maddeler", "bolum_no": "BÖLÜM 2", "bolum": "Eksenler", "baslik": "Yatay eksen: *frekans*",
+     "maddeler": [
+       {"metin": "Birim: _hertz_ (Hz)", "cumle": 0, "ikon": "ses_dalgasi"},
+       {"metin": "Soldan sağa: _pesten tize_", "cumle": 1, "ikon": "muzik"},
+       {"metin": "Rutin aralık: _250 ile 8000 Hz_", "cumle": 2, "ikon": "odyometre"},
+       {"metin": "Ara frekanslar: _1500, 3000, 6000 Hz_", "cumle": 4, "ikon": "odyogram"}],
+     "yan": {"tur": "kart", "ust": "OKTAV", "metin": "Frekansın *iki katına* çıktığı aralık", "cumle": 3},
+     "cumleler": [
+       "Odyogramın yatay ekseninde frekans yer alır ve birimi hertzdir.",
+       "Frekans soldan sağa doğru artar; yani sol tarafta pes, sağ tarafta tiz sesler bulunur.",
+       "Rutin testte genellikle iki yüz elli hertzden sekiz bin hertze kadar olan frekanslar ölçülür.",
+       "Bu frekanslar birer oktav arayla dizilir; her oktavda frekans iki katına çıkar.",
+       "Komşu iki oktav arasında belirgin fark varsa, bin beş yüz ya da üç bin hertz gibi ara frekanslar da test edilir.",
+       "İnsan kulağı yaklaşık yirmi ile yirmi bin hertz arasını duyabilir.",
+       "Konuşmanın anlaşılması için en önemli bölge ise kabaca beş yüz ile dört bin hertz arasıdır."]},
+
+    {"id": "dikey", "tur": "maddeler", "bolum_no": "BÖLÜM 2", "bolum": "Eksenler", "baslik": "Dikey eksen: *işitme düzeyi*",
+     "maddeler": [
+       {"metin": "Birim: _dB HL_", "cumle": 0, "ikon": "hoparlor"},
+       {"metin": "_0 dB HL_: normal gençlerin ortalama eşiği", "cumle": 1, "ikon": "kulak"},
+       {"metin": "Aşağı indikçe _daha şiddetli_ ses", "cumle": 3, "ikon": "gurultu"},
+       {"metin": "Aralık: _-10 ile 120 dB HL_", "cumle": 4, "ikon": "odyogram"}],
+     "yan": {"tur": "kart", "ust": "DİKKAT", "metin": "0 dB HL, *sessizlik* demek değildir", "cumle": 2},
+     "cumleler": [
+       "Dikey eksende işitme düzeyi yer alır; birimi işitme düzeyi desibelidir ve kısaca dB HL olarak yazılır.",
+       "Sıfır dB HL, işitmesi normal genç yetişkinlerin her frekanstaki ortalama eşiğine karşılık gelir.",
+       "Bu yüzden sıfır, sessizlik anlamına gelmez; eksi on dB HL gibi değerler de görülebilir.",
+       "Eksende aşağı indikçe sesin daha şiddetli verilmesi gerekir, yani işitme kötüleşir.",
+       "Grafik genellikle eksi on ile yüz yirmi dB HL arasını kapsar.",
+       "Standart odyogramda bir oktavlık yatay mesafe, dikeyde yirmi desibele eşit çizilir; böylece grafikler karşılaştırılabilir."]},
+
+    {"id": "muz", "tur": "gorsel", "bolum_no": "BÖLÜM 2", "bolum": "Eksenler", "baslik": "Konuşma *muzu*",
+     "cizim": "konusma_muzu",
+     "notlar": [
+       {"metin": "Ünlüler: pes ve daha güçlü", "cumle": 1, "ikon": "konusma"},
+       {"metin": "s, ş, f: tiz ve zayıf", "cumle": 2, "ikon": "ses_dalgasi"},
+       {"metin": "Tiz kayıpta ünsüzler kaçar", "cumle": 4, "ikon": "kulak_tikali"}],
+     "cumleler": [
+       "Konuşma seslerini odyogram üzerine yerleştirdiğimizde muza benzeyen bir bölge ortaya çıkar; buna konuşma muzu denir.",
+       "Ünlüler daha pes ve daha güçlüdür; bu yüzden muzun sol tarafında ve daha aşağıda yer alır.",
+       "S, ş ve f gibi sürtünmeli ünsüzler ise tiz ve zayıftır; muzun sağ üst kısmında bulunur.",
+       "Eşikleri muzun üzerinde, yani daha düşük desibel düzeyinde kalan kişi bu sesleri duyabilir.",
+       "Tiz frekanslarda kaybı olan biri ise ünlüleri duyar ama tiz ünsüzleri kaçırabilir; bu yüzden duyuyorum ama anlamıyorum der.",
+       "Konuşma muzu, odyogramı hastaya ve ailesine anlatırken çok kullanışlı bir araçtır."]},
+
+    {"id": "isaretler", "tur": "tablo", "bolum_no": "BÖLÜM 3", "bolum": "İşaretler", "baslik": "Odyogram *işaretleri*",
+     "sutunlar": ["Ölçüm", "Sağ kulak", "Sol kulak"],
+     "satirlar": [
+       {"hucreler": ["Hava yolu", "O (kırmızı)", "X (mavi)"], "cumle": 1, "vurgu": true},
+       {"hucreler": ["Hava yolu, maskeli", "Üçgen", "Kare"], "cumle": 2},
+       {"hucreler": ["Kemik yolu", "&lt;", "&gt;"], "cumle": 3},
+       {"hucreler": ["Kemik yolu, maskeli", "[", "]"], "cumle": 4},
+       {"hucreler": ["Yanıt yok", "Aşağı ok", "Aşağı ok"], "cumle": 5}],
+     "cumleler": [
+       "Odyogram işaretleri çoğunlukla Amerikan Konuşma Dil İşitme Derneği, kısaca ASHA tarafından önerilen kılavuza dayanır.",
+       "Hava yolunda sağ kulak kırmızı yuvarlak, sol kulak mavi çarpı ile işaretlenir.",
+       "Maskeleme yapılmışsa hava yolunda sağ kulak için üçgen, sol kulak için kare kullanılır.",
+       "Kemik yolunda sağ kulak için küçüktür işareti, sol kulak için büyüktür işareti kullanılır.",
+       "Maskeli kemik yolunda ise sağ kulak için açılan köşeli parantez, sol kulak için kapanan köşeli parantez çizilir.",
+       "Cihazın en yüksek düzeyinde bile yanıt alınamazsa, işaretin altına aşağı doğru bir ok eklenir.",
+       "Hava yolu işaretleri düz bir çizgiyle birleştirilir.",
+       "Maskelemeyi ilerideki derslerde ayrıntılı işleyeceğiz; şimdilik işaretleri tanımak yeterli."]},
+
+    {"id": "normal", "tur": "odyogram", "bolum_no": "BÖLÜM 3", "bolum": "İşaretler", "baslik": "Örnek: *normal* işitme",
+     "lejant": [
+       {"isaret": "O", "renk": "sag", "metin": "_Sağ kulak_: hava yolu", "cumle": 0},
+       {"isaret": "X", "renk": "sol", "metin": "_Sol kulak_: hava yolu", "cumle": 1},
+       {"isaret": "✓", "renk": "yesil", "metin": "_Normal_: 25 dB HL'ye kadar", "cumle": 2}],
+     "grafik": {"seriler": [{"kulak": "sag", "tip": "hava", "degerler": [10, 10, 5, 10, 15, 15], "cumle": 0}, {"kulak": "sol", "tip": "hava", "degerler": [10, 15, 10, 15, 20, 15], "cumle": 1}], "bolge": {"ust": -10, "alt": 25, "etiket": "Normal", "cumle": 2}},
+     "cumleler": [
+       "Bu örnekte sağ kulağın hava yolu eşiklerini kırmızı yuvarlaklarla görüyoruz.",
+       "Sol kulağın eşikleri ise mavi çarpılarla işaretlenmiş.",
+       "Yetişkinlerde yirmi beş dB HL ve daha iyi eşikler genellikle normal sınırlar içinde kabul edilir.",
+       "Bu sınır kullanılan sınıflamaya göre biraz değişir; örneğin Dünya Sağlık Örgütü yirmi desibeli sınır alır.",
+       "Çocuklarda birçok klinik daha sıkı bir sınır, genellikle on beş desibel kullanır.",
+       "Bu örnekte iki kulağın tüm eşikleri yeşil bölgede kaldığı için işitme normal sınırlardadır."]},
+
+    {"id": "uc_soru", "tur": "ikonlar", "bolum_no": "BÖLÜM 4", "bolum": "Derece ve tip",
+     "baslik": "Odyogram *üç soruyla* okunur",
+     "ogeler": [
+       {"ikon": "grafik", "baslik": "Derece", "metin": "Kayıp ne kadar?", "cumle": 1},
+       {"ikon": "kulak", "baslik": "Tip", "metin": "Kayıp nerede?", "cumle": 2},
+       {"ikon": "odyogram", "baslik": "Konfigürasyon", "metin": "Hangi biçimde?", "cumle": 3},
+       {"ikon": "kulaklik", "baslik": "Her kulak", "metin": "Ayrı ayrı yanıtlanır", "cumle": 4}],
+     "cumleler": [
+       "Bir odyogramı okurken her kulak için üç soruya yanıt ararız.",
+       "Birincisi derece: kayıp ne kadar büyük?",
+       "İkincisi tip: kayıp kulağın hangi bölümünden kaynaklanıyor?",
+       "Üçüncüsü konfigürasyon: kayıp frekanslara göre nasıl bir biçim çiziyor?",
+       "Bu üç soruyu her kulak için ayrı yanıtlar, sonra iki kulağı birbiriyle karşılaştırırız.",
+       "Şimdi bu soruları sırayla ele alalım."]},
+
+    {"id": "derece", "tur": "tablo", "bolum_no": "BÖLÜM 4", "bolum": "Derece ve tip", "baslik": "Derece: *saf ses ortalaması*",
+     "sutunlar": ["Derece", "dB HL"],
+     "satirlar": [
+       {"hucreler": ["Normal", "-10 ile 25"], "cumle": 2},
+       {"hucreler": ["Hafif", "26 ile 40"], "cumle": 3, "vurgu": true},
+       {"hucreler": ["Orta", "41 ile 55"], "cumle": 4},
+       {"hucreler": ["Orta-ileri", "56 ile 70"], "cumle": 4},
+       {"hucreler": ["İleri", "71 ile 90"], "cumle": 4},
+       {"hucreler": ["Çok ileri", "91 ve üstü"], "cumle": 4}],
+     "cumleler": [
+       "Kaybın derecesi için genellikle saf ses ortalaması, kısaca PTA kullanılır.",
+       "En sık kullanılan biçimde beş yüz, bin ve iki bin hertzdeki hava yolu eşiklerinin ortalaması alınır.",
+       "Bulunan ortalama, bu tablodaki gibi bir sınıflamayla derecelendirilir.",
+       "Örneğin eşik ortalaması otuz beş desibel olan bir kulak, bu ölçekte hafif derecede kayıp olarak tanımlanır.",
+       "Kırk beş desibel orta, seksen desibel ise ileri derecedir.",
+       "Farklı kurumların sınır değerleri biraz farklıdır; bunları beşinci derste ayrıntılı karşılaştıracağız."]},
+
+    {"id": "iletim", "tur": "odyogram", "bolum_no": "BÖLÜM 4", "bolum": "Derece ve tip", "baslik": "Tip: *iletim* tipi kayıp",
+     "lejant": [
+       {"isaret": "O", "renk": "sag", "metin": "_Hava yolu_: sağ kulak", "cumle": 1},
+       {"isaret": "&lt;", "renk": "sag", "metin": "_Kemik yolu_: sağ kulak", "cumle": 2}],
+     "grafik": {"seriler": [{"kulak": "sag", "tip": "hava", "degerler": [40, 40, 35, 35, 40, 45], "cumle": 1}, {"kulak": "sag", "tip": "kemik", "degerler": [10, 10, 5, 10, 15], "cumle": 2}], "bolge": {"ust": -10, "alt": 25, "etiket": "Normal"}, "aralik": {"konum": [1, 10, 40], "etiket": "30 dB", "cumle": 3}},
+     "cumleler": [
+       "Kaybın tipini anlamak için hava yolu ile kemik yolunu karşılaştırırız.",
+       "Bu örnekte sağ kulağın hava yolu eşikleri otuz beş ile kırk beş desibel arasında.",
+       "Kemik yolu eşikleri ise normal bölgede kalıyor.",
+       "İki eşik arasındaki farka hava-kemik aralığı (air-bone gap) denir; burada yaklaşık otuz desibel.",
+       "Kemik yolu normal, hava yolu düşük ve aralık belirginse, kayıp iletim tipidir.",
+       "Bu tablo, sorunun dış ya da orta kulakta olduğunu, iç kulağın ise iyi çalıştığını düşündürür."]},
+
+    {"id": "sensorinoral", "tur": "odyogram", "bolum_no": "BÖLÜM 4", "bolum": "Derece ve tip",
+     "baslik": "Tip: *sensörinöral* kayıp",
+     "lejant": [
+       {"isaret": "X", "renk": "sol", "metin": "_Hava yolu_: sol kulak", "cumle": 1},
+       {"isaret": "&gt;", "renk": "sol", "metin": "_Kemik yolu_: sol kulak", "cumle": 2}],
+     "grafik": {"seriler": [{"kulak": "sol", "tip": "hava", "degerler": [20, 25, 35, 50, 60, 65], "cumle": 1}, {"kulak": "sol", "tip": "kemik", "degerler": [15, 25, 35, 45, 55], "cumle": 2}], "bolge": {"ust": -10, "alt": 25, "etiket": "Normal"}},
+     "cumleler": [
+       "Şimdi sol kulağa ait başka bir örneğe bakalım.",
+       "Hava yolu eşikleri tiz frekanslara doğru giderek kötüleşiyor.",
+       "Kemik yolu eşikleri de hava yolunu yakından izliyor; aradaki fark on desibeli geçmiyor.",
+       "Hava ve kemik yolunun birlikte düştüğü bu tabloya sensörinöral işitme kaybı denir.",
+       "Bu tipte sorun iç kulakta ya da işitme sinirinde yer alır.",
+       "Hava ve kemik yolunun ikisi de düşük ve aralarında anlamlı bir aralık varsa, buna mikst kayıp denir.",
+       "Mikst kayıpta iletim ve sensörinöral bileşen birlikte bulunur; tipleri dördüncü derste ayrıntılı göreceğiz."]},
+
+    {"id": "konfigurasyon", "tur": "tablo", "bolum_no": "BÖLÜM 5", "bolum": "Konfigürasyon",
+     "baslik": "Konfigürasyon: kaybın *biçimi*", "sutunlar": ["Biçim", "Görünüm"],
+     "satirlar": [
+       {"hucreler": ["Düz", "Tüm frekanslar benzer"], "cumle": 1},
+       {"hucreler": ["Yükselen", "Pes frekanslar daha kötü"], "cumle": 2},
+       {"hucreler": ["Eğimli düşen", "Tiz frekanslar daha kötü"], "cumle": 3, "vurgu": true},
+       {"hucreler": ["Çentikli", "Tek bölgede çukur"], "cumle": 4},
+       {"hucreler": ["Kurabiye ısırığı", "Orta frekanslar daha kötü"], "cumle": 5}],
+     "cumleler": [
+       "Üçüncü soru konfigürasyondur, yani kaybın frekanslara göre aldığı biçimdir.",
+       "Eşikler tüm frekanslarda birbirine yakınsa buna düz konfigürasyon denir.",
+       "Pes frekanslarda kayıp daha fazlaysa ve eğri sağa doğru yükseliyorsa, yükselen konfigürasyondan söz ederiz.",
+       "Tiz frekanslara doğru kötüleşen eğri ise eğimli düşen konfigürasyondur ve en sık görülen biçimlerden biridir.",
+       "Çentikli konfigürasyonda bir frekans bölgesinde belirgin bir çukur, ardından yeniden iyileşme görülür.",
+       "Orta frekanslarda kaybın daha fazla olduğu biçime ise kurabiye ısırığı denir."]},
+
+    {"id": "konfig_ornek", "tur": "odyogram", "bolum_no": "BÖLÜM 5", "bolum": "Konfigürasyon",
+     "baslik": "Eğimli ve *çentikli* örnek",
+     "lejant": [
+       {"isaret": "O", "renk": "sag", "metin": "_Sağ_: eğimli düşen", "cumle": 0},
+       {"isaret": "X", "renk": "sol", "metin": "_Sol_: 4000 Hz çentiği", "cumle": 2}],
+     "grafik": {"seriler": [{"kulak": "sag", "tip": "hava", "degerler": [15, 20, 30, 45, 60, 70], "cumle": 0}, {"kulak": "sol", "tip": "hava", "degerler": [10, 10, 10, 15, 45, 20], "cumle": 2}], "bolge": {"ust": -10, "alt": 25, "etiket": "Normal"}},
+     "cumleler": [
+       "Bu örnekte sağ kulakta, tiz frekanslara doğru giderek artan eğimli bir kayıp görülüyor.",
+       "Pes frekanslar normal sınırda; bin hertzden itibaren eşikler giderek kötüleşiyor.",
+       "Sol kulakta ise dört bin hertzde bir çentik var; sekiz bin hertzde eşik yeniden iyileşiyor.",
+       "Üç bin ile altı bin hertz arasındaki böyle bir çentik, uzun süre gürültüye maruz kalanlarda sık görülür.",
+       "Yine de tek başına bir çentik tanı koydurmaz; öykü ve diğer testlerle birlikte değerlendirilir.",
+       "Konfigürasyon, kaybın olası nedenleri ve işitme cihazı ayarı hakkında önemli ipuçları verir."]},
+
+    {"id": "simetri", "tur": "maddeler", "bolum_no": "BÖLÜM 5", "bolum": "Konfigürasyon",
+     "baslik": "İki kulağı *karşılaştırın*",
+     "maddeler": [
+       {"metin": "_Simetrik_ mi, asimetrik mi?", "cumle": 1, "ikon": "kulak"},
+       {"metin": "Belirgin fark: _not edilir_", "cumle": 2, "ikon": "uyari"},
+       {"metin": "Rapor: _derece, tip, konfigürasyon_", "cumle": 3, "ikon": "rapor"}],
+     "cumleler": [
+       "Son adımda iki kulağı birbiriyle karşılaştırırız.",
+       "İki kulağın eşikleri birbirine yakınsa kayıp simetrik, belirgin farklıysa asimetrik kabul edilir.",
+       "Asimetri ölçütleri kaynaklara göre değişir; ancak belirgin bir fark her zaman not edilir ve ileri değerlendirme gerektirebilir.",
+       "Sonuçta rapora her kulak için derece, tip ve konfigürasyon yazılır.",
+       "Örnek bir ifade şöyle olabilir: sağ kulakta orta derecede, eğimli düşen, sensörinöral işitme kaybı."]},
+
+    {"id": "ipucu", "tur": "ipucu", "baslik": "Klinikte dikkat",
+     "metin": "Okumaya başlamadan önce lejanta bakın: kullanılan kulaklık, maskeleme ve yanıtsız noktalar yorumunuzu doğrudan değiştirir.",
+     "cumleler": [
+       "Klinikte işe yarayan bir alışkanlık: odyogramı okumaya başlamadan önce lejantına bakın.",
+       "Hangi kulaklığın kullanıldığı, maskeleme yapılıp yapılmadığı ve yanıt alınamayan noktalar yorumu doğrudan değiştirir.",
+       "Örneğin maskelemesiz bir kemik yolu eşiği, aslında karşı kulağın yanıtı olabilir.",
+       "Ok işaretli bir noktayı da gerçek eşik gibi okumayın; orada yalnız cihaz sınırına kadar yanıt olmadığı bilinir."]},
+
+    {"id": "ozet", "tur": "ozet", "baslik": "Bu derste *öğrendiklerimiz*",
+     "maddeler": [
+       {"metin": "Yatay eksen *frekans*, dikey eksen dB HL", "cumle": 0, "ikon": "odyogram"},
+       {"metin": "Sağ kırmızı O, sol *mavi X*", "cumle": 1, "ikon": "kulaklik"},
+       {"metin": "Hava ve kemik yolu *tipi* gösterir", "cumle": 2, "ikon": "kemik_vibratoru"},
+       {"metin": "Sıra: *derece*, tip, konfigürasyon", "cumle": 3, "ikon": "kontrol_listesi"}],
+     "cumleler": [
+       "Odyogramın yatay ekseninde frekans, dikey ekseninde dB HL cinsinden işitme düzeyi yer alır.",
+       "Sağ kulak kırmızı yuvarlak, sol kulak mavi çarpı ile işaretlenir; kemik yolu ayrı işaretlerle gösterilir.",
+       "Hava ile kemik yolunun ilişkisi kaybın iletim, sensörinöral ya da mikst tipte olduğunu gösterir.",
+       "Her kulak için derece, tip ve konfigürasyonu sırayla okuruz."]},
+
+    {"id": "test", "tur": "test", "soru": "Kemik yolu normal, hava yolu 40 dB HL ise kayıp tipi nedir?",
+     "secenekler": ["Sensörinöral", "İletim tipi", "Mikst", "Normal işitme"], "dogru": 1,
+     "aciklama": "Kemik yolu normal ve _hava-kemik aralığı_ belirgin: iletim tipi kayıp.",
+     "cumleler": [
+       {"yazi": "Kendinizi test edin: Kemik yolu normal, hava yolu kırk dB HL ise kayıp hangi tiptedir?", "sonra_bekle": 5},
+       "Doğru cevap B, iletim tipi. Kemik yolu normalken hava yolunun düşük olması belirgin bir hava-kemik aralığı oluşturur."]},
+
+    {"id": "kapanis", "tur": "kapanis", "sonraki": "Odyoloji nedir, odyolog *ne iş yapar?*", "cikis": 2.5,
+     "cumleler": [
+       "Bir sonraki derste odyolojinin ne olduğunu ve bir odyoloğun hangi alanlarda çalıştığını konuşacağız.",
+       "Yeni dersleri kaçırmamak için kanala abone olun. Görüşmek üzere!"]}
+  ]
+}
