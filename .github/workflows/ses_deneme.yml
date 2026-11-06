@@ -24,6 +24,17 @@ jobs:
           - { ad: ema,            ayar: '{"motor": "genel", "ses": "ema:varsayilan"}',     paket: 'ema' }
           - { ad: chatterbox_erkek, ayar: '{"motor": "genel", "ses": "chatterbox:male_1"}',   paket: 'chatterbox' }
           - { ad: chatterbox_kadin, ayar: '{"motor": "genel", "ses": "chatterbox:female_2"}', paket: 'chatterbox' }
+          # 6.11.2026 ek sesler: Pocket'in diğer hazır sesleri ve Microsoft'un Türkçe okuyabilen çok dilli sesleri
+          - { ad: pocket_erkek2,  ayar: '{"motor": "genel", "ses": "pocket:male_2"}',      paket: 'pocket' }
+          - { ad: pocket_erkek3,  ayar: '{"motor": "genel", "ses": "pocket:male_3"}',      paket: 'pocket' }
+          - { ad: pocket_kadin1,  ayar: '{"motor": "genel", "ses": "pocket:female_1"}',    paket: 'pocket' }
+          - { ad: pocket_kadin3,  ayar: '{"motor": "genel", "ses": "pocket:female_3"}',    paket: 'pocket' }
+          - { ad: edge_andrew,    ayar: '{"motor": "edge", "ses": "en-US-AndrewMultilingualNeural", "hiz": "+0%"}',    paket: '' }
+          - { ad: edge_florian,   ayar: '{"motor": "edge", "ses": "de-DE-FlorianMultilingualNeural", "hiz": "+0%"}',   paket: '' }
+          - { ad: edge_remy,      ayar: '{"motor": "edge", "ses": "fr-FR-RemyMultilingualNeural", "hiz": "+0%"}',      paket: '' }
+          - { ad: edge_ava,       ayar: '{"motor": "edge", "ses": "en-US-AvaMultilingualNeural", "hiz": "+0%"}',       paket: '' }
+          - { ad: edge_emma,      ayar: '{"motor": "edge", "ses": "en-US-EmmaMultilingualNeural", "hiz": "+0%"}',      paket: '' }
+          - { ad: edge_seraphina, ayar: '{"motor": "edge", "ses": "de-DE-SeraphinaMultilingualNeural", "hiz": "+0%"}', paket: '' }
     steps:
       - name: Secim
         id: sec

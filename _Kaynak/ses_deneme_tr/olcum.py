@@ -47,6 +47,12 @@ def main(klasor, cikis):
     sa = json.loads(os.environ['AKADEMI_SES_AYAR_TR']) if os.environ.get('AKADEMI_SES_AYAR_TR') else dict(MARKA['ses']['tr'])
     sa.setdefault('hiz', '')
     model = WhisperModel('medium', device='cpu', compute_type='int8')
+    # önbellek dosyası yoksa (ör. ses modeli betikleri sonradan değişti) cümle, bitmiş dersin _ses.wav'ından
+    # zamanlama.json'daki yerine göre kesilir
+    zaman = json.loads((klasor / 'zamanlama.json').read_text(encoding='utf-8')) if (klasor / 'zamanlama.json').exists() else None
+    tum = None
+    yerler = [(sz['bas'] + c['b'], c['sure']) for sz in zaman['sahneler'] for c in sz['cumleler']] if zaman else []
+    sira = 0
     kelime_hata = kelime = harf_hata = harf = 0
     sure = 0.0
     cumleler = []
@@ -55,9 +61,18 @@ def main(klasor, cikis):
             yazi, sm = cumle_al(c)
             sm = okunus(sm or yazi, 'tr')
             dosya, _ = onbellek_yolu(sa, sm, klasor / '_tts')
-            ham = subprocess.run([FF, '-v', 'error', '-i', str(dosya), '-f', 'f32le', '-ac', '1', '-ar', '16000', '-'],
-                                 capture_output=True, check=True).stdout
-            x = np.frombuffer(ham, dtype=np.float32)
+            if dosya.exists():
+                ham = subprocess.run([FF, '-v', 'error', '-i', str(dosya), '-f', 'f32le', '-ac', '1', '-ar', '16000', '-'],
+                                     capture_output=True, check=True).stdout
+                x = np.frombuffer(ham, dtype=np.float32)
+            else:
+                if tum is None:
+                    ham = subprocess.run([FF, '-v', 'error', '-i', str(klasor / '_ses.wav'), '-f', 'f32le', '-ac', '1', '-ar', '16000', '-'],
+                                         capture_output=True, check=True).stdout
+                    tum = np.frombuffer(ham, dtype=np.float32)
+                b, d = yerler[sira]
+                x = tum[int(b * 16000):int((b + d) * 16000)]
+            sira += 1
             sure += len(x) / 16000
             parcalar, bilgi = model.transcribe(x, language='tr', beam_size=5)
             duyulan = ' '.join(p.text.strip() for p in parcalar)
